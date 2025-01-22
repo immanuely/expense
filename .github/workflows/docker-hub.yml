@@ -6,7 +6,7 @@ on:
     branches: ["main"]
 env:
   REGISTRY: docker.io
-  FRONTEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/frontend-app
+  FRONTEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/client-app
   BACKEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/backend-app
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build frontend Docker image
-        run: docker build -t ${{ env.FRONTEND_IMAGE_NAME }}:latest ./frontend
+        run: docker build -t ${{ env.FRONTEND_IMAGE_NAME }}:latest ./client
 
       - name: Build backend Docker image
         run: docker build -t ${{ env.BACKEND_IMAGE_NAME }}:latest ./backend

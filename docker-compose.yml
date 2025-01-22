@@ -9,9 +9,9 @@ services:
     networks:
       - app-network
 
-  frontend:
-    build: ./frontend
-    image: ${{ secrets.DOCKER_USERNAME }}/frontend-app:latest
+  client:
+    build: ./client
+    image: ${{ secrets.DOCKER_USERNAME }}/client-app:latest
     ports:
       - "3000:3000"
     depends_on:

@@ -1,4 +1,4 @@
-# Horizontal Pod Autoscaler for Frontend
+# frontend
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -19,7 +19,7 @@ spec:
           type: Utilization
           averageUtilization: 50
 
-# Horizontal Pod Autoscaler for Backend
+# backend
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
